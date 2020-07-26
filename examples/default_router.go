@@ -1,4 +1,4 @@
-package main
+package examples
 
 import (
 	"log"
@@ -9,7 +9,7 @@ import (
 	"go.elastic.co/apm/module/apmhttp"
 )
 
-func main() {
+func DefaultRouter() {
 	mux := http.DefaultServeMux
 	mux.Handle("/", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
